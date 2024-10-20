@@ -1,12 +1,9 @@
-# Your Name Here
+# Eugenia Ceinos
 # UWYO COSC 1010
 # Submission Date
 # Lab 06
-# Lab Section: 
-# Sources, people worked with, help given to: 
-# your
-# comments
-# here
+# Lab Section: 16
+# Sources, people worked with, help given to: none
 
 
 random_string = """
@@ -77,13 +74,25 @@ print(len(random_string)) # Print out the size for reference
 # Each letter will be PAIRED with its corresponding value 
 # That is to say, this is a great use of dictionaries
     # You will  need to add the letter to the dictionary on first occurrence 
-    # Then increment its corresponding count 
-
+    # Then increment its corresponding count
 
 #Load all the elements into a dictionary
 #Will need to first declare a dictionary 
 
-# Output: each letter and its corresponding occurrence in alphabetical order
+# Output: each letter and its corresponding occurrence in alphabetical order 
+
+alphabet = {}
+
+for c in random_string:
+    if c not in alphabet:
+        alphabet[c] = 0
+    else: 
+        alphabet[c] += 1
+
+order = "abcdefjhijklmnopqrstuvwxyz"
+
+for i in order:
+    print(f"For the letter {i}, there are {alphabet[i]} occurences")
 
 print("*"*75)
 # Output which letter occurred the most 
@@ -94,7 +103,7 @@ least_occurred = ""
 print(f"The letter that occurred the most is {most_occurred}")
 print("*"*75)
 # Output which letter occurred the least 
-print(f"The letter that occurred the most is {least_occurred}")
+print(f"The letter that occurred the least is {least_occurred}")
 print("*"*75)
 
 # Output what the percentage of the string each character is, again in alphabetical
