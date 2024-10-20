@@ -1,6 +1,6 @@
 # Eugenia Ceinos
 # UWYO COSC 1010
-# Submission Date
+# Submission Date: 10/19/2024
 # Lab 06
 # Lab Section: 16
 # Sources, people worked with, help given to: none
