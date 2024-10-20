@@ -80,30 +80,38 @@ print(len(random_string)) # Print out the size for reference
 #Will need to first declare a dictionary 
 
 # Output: each letter and its corresponding occurrence in alphabetical order 
+# Output what the percentage of the string each character is, again in alphabetical
 
 alphabet = {}
 
 for c in random_string:
     if c not in alphabet:
-        alphabet[c] = 0
+        alphabet[c] = 1
     else: 
         alphabet[c] += 1
 
-order = "abcdefjhijklmnopqrstuvwxyz"
+print("*"*75)
 
+most_occurred = 0
+least_occurred = 0
+
+order = "abcdefjhijklmnopqrstuvwxyz"
+max = 0
+min = 2501
 for i in order:
-    print(f"For the letter {i}, there are {alphabet[i]} occurences")
+    print(f"For the letter {i}, there are {alphabet[i]} occurences, and is {alphabet[i]*100/2500}% of the string")
+   # quiero ver el porcentaje que tiene con respecto 
+    if alphabet[i] >= max:
+        max = alphabet[i]
+        most_occurred = i
+    if alphabet[i] <= min:
+        min = alphabet[i]
+        least_occurred = i
 
 print("*"*75)
 # Output which letter occurred the most 
-
-most_occurred = ""
-least_occurred = ""
-
 print(f"The letter that occurred the most is {most_occurred}")
 print("*"*75)
 # Output which letter occurred the least 
 print(f"The letter that occurred the least is {least_occurred}")
 print("*"*75)
-
-# Output what the percentage of the string each character is, again in alphabetical
